@@ -9,9 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 // mongoDb canaction/\
-const uri = "mongodb+srv://assignment11:solaiman12345@cluster0.tqsmgls.mongodb.net/?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://assignment11:solaiman12345@cluster0.tqsmgls.mongodb.net/?retryWrites=true&w=majority";
 
-// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tqsmgls.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tqsmgls.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { serverApi: { version: ServerApiVersion.v1, strict: true, deprecationErrors: true, } });
 
 async function run() {
